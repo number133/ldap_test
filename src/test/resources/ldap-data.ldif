@@ -1,0 +1,55 @@
+# Root entry. Organization
+dn: dc=test,dc=kz
+objectClass: organization
+objectClass: top
+o: Test organization
+
+# Employees/Users
+dn: ou=users,dc=test,dc=kz
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+# Users in Astana
+dn: l=astana,ou=users,dc=test,dc=kz
+objectClass: locality
+objectClass: top
+
+# Users in Karaganda
+dn: l=karaganda,ou=users,dc=test,dc=kz
+objectClass: locality
+objectClass: top
+
+# User
+dn: cn=TestName1 TestLast1,l=astana,ou=users,dc=test,dc=kz
+objectClass: customEmployee
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: TestName1 TestLast1
+sn: TestLast1
+userPassword:: c2VjcmV0
+customCreateDate: 20151120110011.0Z
+customModifyDate: 20151120110011.0Z
+givenName: TestName1
+initials: A
+mail: test.name1@test.kz
+telephoneNumber: 778899
+
+# User
+dn: cn=TestName2 TestLast2,l=karaganda,ou=users,dc=test,dc=kz
+objectClass: customEmployee
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: TestName2 TestLast2
+sn: TestLast2
+userPassword:: c2VjcmV0
+customCreateDate: 20151120110011.0Z
+customModifyDate: 20151120110011.0Z
+givenName: TestName2
+initials: A
+mail: test.name2@test.kz
+telephoneNumber: 778899
